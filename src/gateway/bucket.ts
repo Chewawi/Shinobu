@@ -1,6 +1,6 @@
 /** Create from scratch */
 
-import type { PickPartial } from '../types';
+import type { PickPartials } from '../types';
 
 export interface LeakyBucket {
 	/** How many tokens this bucket can hold. */
@@ -133,7 +133,7 @@ export function createLeakyBucket({
 	waiting,
 	...rest
 }: Omit<
-	PickPartial<LeakyBucket, 'max' | 'refillInterval' | 'refillAmount'>,
+	PickPartials<LeakyBucket, 'max' | 'refillInterval' | 'refillAmount'>,
 	'tokens'
 > & {
 	/** Current tokens in the bucket.

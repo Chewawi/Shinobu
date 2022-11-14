@@ -1,3 +1,5 @@
+import type { ShardManagerOptions } from '../types';
+
 const isPlainObject = (value: any) => {
     return (
       value !== null
@@ -39,4 +41,24 @@ export const Options = (defaults: any, ...options: any[]): any => {
     }
 
     return Options(defaults, ...options);
+};
+
+export const DeafultGatewayOptions: ShardManagerOptions = {
+  async handleDiscordPayload(_shard, _payload) {
+    return;
+  },
+  gateway: {
+    url: '',
+    shards: 0,
+    session_start_limit: {
+      total: 1000,
+      remaining: 1000,
+      reset_after: 3600000,
+      max_concurrency: 1
+    }
+  },
+  config: {
+    token:'',
+    intents: 0,
+  }
 };

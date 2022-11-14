@@ -12,6 +12,7 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"preserveConstEnums": true,
+		"outDir": "./dist",
 
 		/* Type Checking */
 		"noImplicitAny": true,
