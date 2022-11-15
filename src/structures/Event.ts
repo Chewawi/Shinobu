@@ -1,4 +1,4 @@
-import type { GatewayDispatchEvents, GatewayDispatchPayload } from 'discord-api-types/v10';
+import type { GatewayDispatchEvents } from 'discord-api-types/v10';
 import type { Client } from '../client/client';
 
 export abstract class DiscordEvent {
@@ -9,6 +9,6 @@ export abstract class DiscordEvent {
 		this.name = null;
 	}
 
-	async execute(_shardId: number, _payload: GatewayDispatchPayload) { return; }
+	async execute(_shardId: number, _payload: unknown) { return; }
 }
 
