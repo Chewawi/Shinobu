@@ -35,11 +35,6 @@ export class ShardManager {
 	constructor(options: ShardManagerOptions) {
 		this.options = Options(ShardManager.DEFAULTS, options);
 	}
-
-	get ping() {
-    const sum = this.shards.reduce((a, b) => a + b.ping, 0);
-    return sum / this.shards.size;
-	}
 	
 	/** Invokes internal processing and respawns shards */
 	async respawns(): Promise<void> {
