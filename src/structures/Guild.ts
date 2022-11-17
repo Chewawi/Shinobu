@@ -6,7 +6,6 @@ export class Guild {
 	id: string;
     constructor(client: Client, payload: GatewayGuildCreateDispatchData) {
         this.client = client;
-        this.id = payload.id
+        this.id = payload.id;
     }
-
 }

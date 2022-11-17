@@ -35,7 +35,7 @@ export class ShardManager {
 	constructor(options: ShardManagerOptions) {
 		this.options = Options(ShardManager.DEFAULTS, options);
 	}
-	
+
 	/** Invokes internal processing and respawns shards */
 	async respawns(): Promise<void> {
 		//

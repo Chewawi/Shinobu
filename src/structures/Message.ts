@@ -14,6 +14,6 @@ export class Message {
     }
 
     async send(content: string) {
-		await this.client.rest.post(this.client.routes.channelMessages(this.channelId), { body: { content: content } });
+		await this.client.rest.post(this.client.routes.channelMessages(this.channelId), { body: { content } });
 	}
 }
